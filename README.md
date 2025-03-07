@@ -1,13 +1,6 @@
 # 3 Charts - Department of Defense Funding Analysis
 
-This repository contains a specialized visualization tool focused on Department of Defense funding analysis. It features three interactive charts that provide insights into defense spending patterns, budget allocations, and fiscal year comparisons.
-
-## Features
-
-- Interactive visualization of Department of Defense budget data
-- Fiscal year comparison tools (2020-2025)
-- Breakdown of spending by military branches and programs
-- Detailed analysis of budget allocation trends
+This repository contains three charts focused on Department of Defense funding analysis. It features three interactive charts that provide insights into defense spending patterns, budget allocations, and fiscal year comparisons.
 
 ## Development Setup
 
