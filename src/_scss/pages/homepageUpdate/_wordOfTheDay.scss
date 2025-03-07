@@ -1,0 +1,162 @@
+.word-of-the-day__section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+
+  .word-of-the-day__heading {
+    display: flex;
+    flex-direction: row;
+    font-size: rem(16);
+    font-weight: $font-semibold;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: $theme-color-body;
+    margin-bottom: 16px;
+
+    .word-of-the-day__heading--background {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      background-color: $theme-color-accent-4-light;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      border-radius: 2px;
+
+      .word-of-the-day__heading--icon {
+        width: 8px;
+        color: $theme-color-accent-4;
+      }
+    }
+  }
+
+  .word-of-the-day__headline {
+    color: $theme-color-headline-inverse;
+    margin: rem(40) rem(32) rem(16) rem(32);
+    font-size: rem(24);
+    font-weight: $font-semibold;
+    line-height: 1.25;
+  }
+
+  .word-of-the-day__divider {
+    margin: 0 rem(32);
+    width: rem(64);
+    height: rem(4);
+    background-color: $blue-warm-40v;
+  }
+
+  .word-of-the-day__body {
+    color: $theme-color-body-inverse;
+    font-size: rem(20);
+    line-height: 1.5;
+
+    .definition {
+      height: 150px;
+      overflow: hidden;
+
+      @media(min-width: $large-screen) {
+        height: unset;
+      }
+
+      div {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+
+        @media(min-width: $medium-screen) {
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+        }
+
+        @media(min-width: $large-screen) {
+          -webkit-line-clamp: 6;
+        }
+      }
+    }
+  }
+
+  .card__body {
+    height: calc(100% - 100px);
+
+    .page__loading {
+      @media(min-width: $large-screen) {
+        min-height: unset;
+      }
+
+      div,
+      svg {
+        color: $gray-2;
+      }
+    }
+    .page__loading .page__ellipsis-container .page__ellipsis:after {
+      color: $gray-2;
+    }
+  }
+
+  .card__body_error {
+    height: 100%;
+    justify-content: center;
+  }
+
+  .usa-dt-flex-grid__col {
+    height: 100%;
+  }
+
+  .card__button {
+    margin-top: rem(32);
+    justify-content: flex-start;
+
+    @media(min-width: $medium-screen) {
+      margin-top: 0;
+    }
+    .button-type__secondary-dark{
+      width: rem(106) !important;
+    }
+  }
+
+  .word-of-the-day__button {
+    cursor: pointer;
+    border-color: $card-outline-color;
+    color: $card-outline-color;
+    width: rem(106);
+    height: rem(42);
+    line-height: rem(21);
+    font-size: rem(14);
+    justify-content: center;
+    &:hover {
+      border-color: $gray-cool-5;
+      color: $gray-cool-5;
+    }
+  }
+
+  .word-of-the-day__error-message {
+    text-align: center;
+    color: $gray-2;
+  }
+
+  .word-of-the-day-paragraph-one {
+    font-size: $font-size-24;
+    text-align: center;
+    font-weight: $font-semibold;
+    margin-bottom: rem(4);
+    margin-top: rem(0);
+  }
+
+  .word-of-the-day-paragraph-two {
+    font-size: $font-size-16;
+    margin-top: rem(4);
+  }
+
+  .word-of-the-day-error-button {
+    border-radius: rem(4);
+    border: solid rem(1) $gray-cool-10;
+    background-color: $blue-warm-70v;
+    width: rem(147);
+    height: rem(40);
+    font-weight: $font-semibold;
+    font-size: $font-size-16;
+    padding: 0;
+  }
+}

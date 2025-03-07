@@ -1,0 +1,48 @@
+.ready-to-get-started__section {
+  padding: $global-padding * 6 0;
+  background-color: $theme-color-3;
+
+  .ready-to-get-started__title {
+    color: $color-white;
+    font-size: $font-size-40;
+    font-weight: $font-semibold;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: rem(40);
+  }
+
+  .ready-to-get-started__card-row {
+    .ready-to-get-started__card:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-screen) {
+      .ready-to-get-started__card:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    .ready-to-get-started__card {
+      margin-bottom: $global-margin * 4;
+      @media (min-width: $medium-screen) {
+        margin-bottom: 0;
+      }
+      .card__body {
+        height: 100%;
+      }
+      .card__button {
+        margin-bottom: 0;
+        justify-content: left;
+        .card__button--borderless {
+          white-space: normal;
+        }
+        .button-type__text-light{
+          margin: 0;
+          padding: 0;
+          font-size: $font-size-16;
+        }
+      }
+    }
+  }
+
+}

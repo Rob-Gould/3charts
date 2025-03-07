@@ -1,0 +1,119 @@
+.featured-video__section {
+  margin: $global-margin * 8 0;
+  display: flex;
+  justify-content: center;
+
+  .grid-content {
+    font-size: $font-size-24;
+    border-radius: 8px;
+
+    .usa-dt-flex-grid__row {
+      background-color: $indigo-cool-80v;
+      border-radius: 8px;
+      height: 100%;
+
+      @media(max-width: ($medium-screen - 1)) {
+        flex-direction: column-reverse;
+
+        .featured-video__text {
+          width: 100%;
+          border-radius: 0 0 8px 8px;
+          margin-top: -8px;
+        }
+
+        img {
+          border-radius: rem(8) rem(8) 0 0;
+        }
+      }
+    }
+
+    .featured-video__text {
+      display: flex;
+      flex-direction: column;
+
+      // the logic for these is backwards bc of the
+      // column-reverse above
+      justify-content: center;
+      align-items: flex-start;
+
+      border-radius: 8px 0 0 8px;
+      background-color: $indigo-cool-80v;
+      padding: 71px 40px;
+      height: 100%;
+      align-content: center;
+
+      @media(min-width: $large-screen) {
+        padding: 64px 40px;
+      }
+
+      @media(min-width: $medium-screen) {
+        padding: 0 40px;
+      }
+    }
+
+    .featured-video__headline {
+      font-size: $font-size-24;
+      font-weight: $font-semibold;
+      line-height: 1.25;
+      color: $gray-2;
+      margin-bottom: 40px;
+
+      @media(min-width: $tablet-screen) {
+        font-size: $font-size-40;
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .featured-video__publishedAt {
+      font-size: $font-size-16;
+      color: $gray-10;
+      width: 100%;
+    }
+  }
+
+  img {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .featured-video__inline {
+    display: inline-flex;
+    flex-direction: inherit;
+    width: 100%;
+  }
+
+  .training-video-feature__column-share-icon {
+    height: rem(24);
+    width: rem(24);
+
+    // this is to place the msg on top of the 'copy link' item in dropdown
+    .usda-share-icon .copy-confirmation {
+      left: rem(4);
+    }
+
+    .usda-share-icon {
+      height: rem(24);
+      width: rem(24);
+
+      .usa-dt-picker {
+        height: rem(24);
+        width: rem(24);
+
+        .usa-dt-picker__dropdown-container {
+          height: rem(24);
+            width: rem(24);
+
+          .usa-dt-picker__button {
+            height: rem(24);
+            width: rem(24);
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.amounts-viz {
+  width: 100%;
+  @import '../../award/shared/awardAmountsSection/charts';
+  .tooltip-wrapper {
+    display: none;
+    @include media($medium-screen) {
+      @include display(flex);
+      z-index: 1;
+    }
+    .tooltip__content {
+      .tooltip__message {
+        .tooltip__text {
+            padding: 2rem 2rem 0 2rem;
+            .tooltip__text-section {
+                font-weight: $font-normal;
+            }
+            .tooltip__text-section:first-of-type {
+              padding-bottom: 0.5rem;
+              line-height: 1;
+              font-size: 2.8rem;
+            }
+            .tooltip__text-section:nth-child(2) {
+              margin-top: 0;
+            }
+            .tooltip__text-section:last-of-type {
+              padding-top: 2rem;
+            }
+        }
+        .tooltip__text:last-child {
+          padding: 2rem;
+        }
+      } 
+    }
+    .tooltip-pagination-container {
+      @include display(inline-flex);
+      @include align-items(center);
+      @include justify-content(space-around);
+      width: 100%;
+    }
+  }
+  .usa-dt-carousel {
+    .usa-dt-carousel-content {
+      .usa-dt-carousel-item {
+        .usa-dt-carousel-item__list {
+          align-items: stretch;
+          .usa-dt-carousel-item__list-item {
+            @include flex(0 0 100%);
+            width: 100%;
+            .usa-dt-carousel-item__item {
+              padding: 0;
+              padding-top: rem(10);
+              @include display(grid);
+              .default-note {
+                &:first-of-type {
+                  text-align: left;
+                  padding-left: 5rem;
+                  padding-right: 5rem;
+                }
+              }
+              grid-template-rows: 0.25fr 0.25fr 0.25fr;
+                .amounts-viz__title {
+                  line-height: rem(25);
+                  font-size: rem(20);
+                  margin-bottom: 0;
+                  margin-top: 2rem;
+                }
+                .amounts-viz__sub-title {
+                  font-size: rem(16);
+                  letter-spacing: 0;
+                  line-height: rem(22);
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  padding-top: 0;
+                }
+              .amounts-viz__svg {
+                .highlight {
+                  stroke: $color-active;
+                  stroke-width: 3;
+                }
+                pointer-events: visible;
+                line {
+                  pointer-events: visible;
+                  &.opaque {
+                    opacity: 0.5;
+                  }
+                }
+                rect {
+                  pointer-events: visible;
+                  &.opaque {
+                    opacity: 0.5;
+                  }
+                }
+                text {
+                  pointer-events: visible;
+                }
+                g {
+                  pointer-events: visible;
+                }
+                .amounts-text {
+                  cursor: default;
+                  pointer-events: visible;
+                  letter-spacing: 0;
+                  &.opaque {
+                    opacity: 0.5;
+                  }
+                }
+                .amounts-text__value {
+                  font-size: rem(16);
+                  font-weight: $font-semibold;
+                  opacity: 0.7;
+                  line-height: rem(2);
+                }
+                .amounts-text__label {
+                  font-size: rem(12);
+                  opacity: 0.6;
+                  line-height: rem(15);
+                }
+                @include media($medium-screen) {
+                  .amounts-text__value {
+                    font-size: rem(21);
+                    line-height: rem(27);
+                  }
+                  .amounts-text__label {
+                    font-size: rem(16);
+                    line-height: rem(27);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .usa-dt-carousel-pager {
+        padding-top: rem(20);
+      .usa-dt-carousel-pager__list {
+        margin-top: 0;
+      }
+    }
+  }
+  @include media($medium-screen) {
+    .usa-dt-carousel {
+      .usa-dt-carousel-content {
+        .usa-dt-carousel-item {
+          .usa-dt-carousel-item__list {
+            .usa-dt-carousel-item__list-item {
+              .usa-dt-carousel-item__item {
+                .amounts-viz__sub-title {
+                  padding-top: rem(25);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

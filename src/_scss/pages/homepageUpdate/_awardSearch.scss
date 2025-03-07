@@ -1,0 +1,267 @@
+.award-search__section {
+  @media (min-width:1400px) and (max-width: 1600px) {
+    flex-direction: column;
+    display:flex;
+  }
+
+  .award-search__topdiv {
+    @media(min-width:1600px) {
+      justify-content: center;
+      display:flex;
+    }
+  }
+
+  .grid-content {
+    margin-top: 0;
+    margin-bottom: 96px;
+    border-radius: 4px;
+    min-height: 50rem;
+
+    @media (min-width: 1400px) {
+      align-items: center;
+    }
+
+    .award-search__col1 {
+      align-items: center;
+
+      @media (max-width:1400px) {
+        width: 100%;
+      }
+
+      @media(min-width:1400px) {
+        padding-right: 32px;
+        width: 33%;
+      }
+    }
+
+    .award-search__overline-div {
+      display: flex;
+
+      .award-search__span {
+        height: 20px;
+        width: 20px;
+        background-color: $blue-5;
+
+        svg {
+          color: $theme-color-1;
+        }
+      }
+
+      .award-search__overline {
+        margin: 0 0 0 8px;
+        font-size: rem(16);
+        font-weight: $font-semibold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: $body-color;
+      }
+    }
+
+    .award-search__header {
+      font-size: rem(40);
+      font-weight: $font-semibold;
+      color: $gray-90;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      margin: 16px 0 0 0;
+    }
+
+    .award-search__subtext {
+      margin: 16px 0 0;
+      font-size: rem(20);
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: $body-color;
+
+      @media(min-width: 320px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .award-search__swiper {
+      height: auto;
+
+      .swiper-pagination {
+        bottom: 12px;
+      }
+    }
+
+    .swiper-wrapper {
+      @media (min-width: 1400px) {
+        justify-self: right;
+      }
+
+      @media(min-width:320px) {
+        height: 500px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $gray-cool-60;
+    }
+
+    .swiper-slide-prev, .swiper-slide-next {
+      opacity: .5;
+
+      .card-container {
+          box-shadow: none;
+      }
+
+      .card__button, .usda-glossary-link {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
+    .swiper-slide-visible {
+      opacity: 1;
+    }
+
+    .swiper-button-disabled {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: $color-primary;
+      border-radius: 24px;
+      height: 48px;
+      transform: translateY(-20px);
+      width: 48px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: $color-primary-darker;
+      }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      color: $color-white;
+      font-size: rem(20);
+      font-weight: 1000;
+      margin-bottom: -1px;
+    }
+
+    .swiper-button-next::after {
+      margin-left: 5px;
+    }
+
+    .swiper-button-prev::after {
+      margin-right: 5px;
+    }
+
+    .award-search__col2 {
+
+      @media (min-width: 1400px) {
+        display: inline;
+        width: 67%;
+      }
+
+      .award-search__slide {
+        width: rem(288) !important;
+        height: rem(462) !important;
+
+        .card-container {
+          border-radius: rem(16);
+          height: 100%;
+        }
+
+        @media (min-width: $tablet-screen) {
+          width: rem(486) !important;
+          height: rem(482) !important;
+        }
+
+        .award-search__card2 {
+          @media (max-width:500px) {
+            .text {
+              height: rem(96);
+            }
+          }
+
+          @media (max-width: $tablet-screen) {
+            .text {
+              height: rem(98);
+            }
+          }
+
+          @media (min-width: $tablet-screen) {
+            .text {
+              height: auto;
+            }
+          }
+        }
+
+        .award-search__card4 {
+          .card__body {
+            .text {
+              margin-bottom: rem(4);
+              @media (min-width:450px) and (max-width: $tablet-screen) {
+                margin-bottom: 0;
+              }
+              @media (min-width: $tablet-screen) {
+                margin-bottom: $global-margin * 4;
+              }
+            }
+          }
+
+          .award-search__image {
+            @media (max-width: $tablet-screen) {
+              margin-bottom: $global-margin;
+            }
+          }
+        }
+
+        .card__body {
+          height: 100%;
+          padding: rem(24) rem(32);
+
+          @media (min-width: $tablet-screen) {
+            height: unset;
+            padding: rem(40) rem(40) rem(32) rem(40);
+          }
+
+          .headline {
+            margin-bottom: $global-margin;
+          }
+
+          .text {
+            margin-bottom: $global-margin * 4;
+          }
+
+          .card__button {
+            margin-bottom: 0;
+
+            button {
+              margin-right: 0;
+            }
+
+            .button-type__primary-light{
+              width: 100%;
+              justify-content: center;
+            }
+          }
+        }
+
+        .award-search__glossary {
+          display: inline;
+          font-weight: $font-semibold;
+        }
+
+        .award-search__image {
+          margin-bottom: 32px;
+        }
+
+        .usda-glossary-link svg {
+          color: $color-gray-light;
+        }
+      }
+    }
+  }
+}

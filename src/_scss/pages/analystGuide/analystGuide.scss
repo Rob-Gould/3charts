@@ -1,0 +1,232 @@
+.usa-da-analyst-guide-page {
+  @import 'all';
+  @import "./_analystGuideHeader.scss";
+
+  .usa-accordion__button.usa-banner__button {
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  background-color: $color-white;
+
+  .main-content {
+    margin-bottom: rem(40);
+    @media (min-width: $medium-screen) {
+      margin-bottom: rem(60);
+    }
+  }
+
+  .analyst-guide-body {
+    width: 100%;
+    max-width: rem(1400);
+    margin-left: rem(16);
+    margin-right: rem(16);
+    @media (min-width: $tablet-screen) {
+      margin-left: rem(32);
+      margin-right: rem(32);
+    }
+  }
+
+  .analyst-guide__share-dl-wrapper {
+    display: flex;
+    vertical-align: center;
+    .analyst-guide__share-wrapper {
+      &:hover {
+        color: $color-primary-darker;
+      }
+      color: $color-primary;
+      margin-top: $global-margin * 4;
+
+
+      .usda-share-icon {
+        margin-left: 0;
+        span {
+          display: flex;
+        }
+      }
+
+      .usda-share-icon .copy-confirmation {
+        background-color: $color-white;
+        @media(max-width:$medium-screen) {
+          transform: translateX(120px);
+        }
+        svg {
+          color: $green-cool-50;
+        }
+      }
+      .usda-share-icon .usa-dt-picker__dropdown-container {
+        @include button-link;
+        cursor: pointer;
+      }
+
+      .usda-share-icon .usa-dt-picker {
+        margin-bottom: 0;
+      }
+
+      .usda-share-icon .usa-dt-picker .usa-dt-picker__dropdown-container .usa-dt-picker__list {
+        min-width: 15rem;
+        margin-top:20px;
+        padding-top: 8px;
+        overflow: hidden;
+        padding-bottom: 8px;
+        .usa-dt-picker__list-item {
+          border-top: none;
+        }
+        svg {
+          color: $gray-cool-60;
+        }
+        span {
+          color: $gray-cool-60;
+          font-weight: $font-semibold;
+          font-size: rem(16);
+          margin-left: 16px;
+        }
+        .usa-dt-picker__item {
+          padding-left: 16px;
+          padding-right: unset;
+          padding-top: 8px;
+          padding-bottom: 8px;
+
+          &:hover {
+            background-color: $gray-cool-3;
+          }
+        }
+      }
+
+      .usa-dt-picker .usa-dt-picker__dropdown-container .usa-dt-picker__button {
+        margin: 0 0.5rem;
+      }
+
+      .usda-share-icon .usa-dt-picker__dropdown-container .usa-dt-picker__button svg {
+        &:hover {
+          color: $color-primary-darker !important;
+        }
+      }
+    }
+
+    .analyst-guide__download-wrapper {
+      display:inline-block;
+      color: $color-primary;
+      background-color: white;
+      margin-top: $global-margin * 4;
+      margin-left: 0;
+      left: 10px;
+      &:hover {
+        color: $color-primary-darker;
+      }
+
+
+      .analyst-guide__download-button {
+        @include button-link;
+        padding: 0px 20px 0px 20px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        @media (min-width: $medium-screen) {
+          padding: 0px 20px 7px 20px;
+          margin-top: 10px;
+          margin-bottom: 0px;
+        }
+        &:hover {
+          color: $color-primary-darker;
+        }
+
+        .analyst-guide__download-icon {
+          width: 25px;
+          height:25px;
+          color: $color-primary;
+          &:hover {
+            color: $color-primary-darker;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .analyst-guide__topTitle {
+    font-weight: $font-semibold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: $heading-line-height;
+    letter-spacing: normal;
+    color: $gray-90;
+    font-size: rem(28);
+    margin: 32px 0px 20px;
+  }
+
+  .analyst-guide__bodyText {
+    margin: 36px 0px 20px;
+    font-size: $base-font-size;
+    font-weight: $font-normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: $base-line-height;
+    letter-spacing: normal;
+    color: $color-base;
+
+    .analyst-guide__external-link {
+      @include button-unstyled;
+      color: $color-primary;
+      font-size: inherit;
+      cursor: pointer;
+      width: fit-content;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .analyst-guide__questionSections {
+      margin: 40px 0px 2px;
+      font-size: rem(20);
+      font-weight: $font-semibold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: $heading-line-height;
+      letter-spacing: normal;
+      color: $gray-90;
+  }
+
+  .analyst-guide__answerSection {
+    @media (max-width: $medium-screen) {
+      margin: 8px 0;
+    }
+  }
+
+  .analyst-guide__questionAnswers {
+    @media (max-width: $medium-screen) {
+      margin-top: 4px;
+    }
+  }
+
+  .analyst-guide__questionLine {
+      margin: 2px 0px 20px;
+      border-bottom: 2px solid black;
+  }
+
+  .analyst-guide__answerStyle {
+    color: $color-base;
+    font-weight: $font-normal;
+    word-break: break-word;
+    .analyst-guide__external-link {
+      @include button-unstyled;
+      color: $theme-color-1;
+      font-size: inherit;
+      cursor: pointer;
+      width: fit-content;
+      &:hover {
+        color: $theme-color-1-dark;
+      }
+    }
+  }
+
+  .analyst-guide__sectionJump {
+    @include button-unstyled;
+    font-size: rem(16);
+    color: $theme-color-1;
+    &:hover {
+      background-color: white;
+      color: $theme-color-1-dark;
+    }
+  }
+}

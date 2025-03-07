@@ -1,0 +1,33 @@
+.cfda-filter {
+    @import "elements/filters/_errorMessage";
+    @import "elements/filters/_typeahead";
+    @import "elements/filters/_selectedFilterBtn";
+    @import "mixins/selectedFilterWrap";
+    @import './pages/award/_moreButton';
+
+    padding-left: rem(20);
+
+    &.searchV2 {
+        padding-left: rem(32);
+    }
+
+    .shown {
+        min-height: rem(18);
+    }
+    .visually-hidden {
+        display: none;
+    }
+
+    .filter-item-wrap {
+        padding-left: 0 !important;
+    }
+
+    .selected-filters {
+        @include selected-filter-wrap;
+        margin-top: rem(20);
+    }
+}
+
+.award-type-filter .filter-submit-hint {
+    padding: 0 rem(20);
+}

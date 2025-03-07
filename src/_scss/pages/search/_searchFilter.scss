@@ -1,0 +1,168 @@
+@import "mixins/selectedFilterWrap";
+@import "elements/filters/_selectedFilterBtn";
+
+.search-filter__container {
+  cursor: pointer;
+
+  &:not(:first-child) {
+    .search-filter__content {
+      border-top: solid 1px $gray-cool-10;
+    }
+  }
+
+  padding: 0 ($global-margin * 4);
+
+  &.hover:hover {
+    background-color: $gray-cool-3;
+  }
+
+  .search-filter__content {
+    height: rem(124);
+    padding: ($global-margin * 2) 0 rem(46) 0;
+
+    &.filter-header__title-only {
+      padding-bottom: $global-margin * 2;
+      height: unset;
+    }
+
+    &.filter-header__title-description {
+      padding-bottom: $global-margin;
+      height: unset;
+    }
+
+    .search-filter__top-row {
+      display: flex;
+      align-items: center;
+
+      .search-filter__top-row-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(21);
+        width: rem(21);
+        min-width: rem(21);
+        border-radius: 4px;
+        margin-right: $global-margin;
+        align-self: flex-start;
+
+        svg {
+          height: rem(12);
+        }
+      }
+
+      .search-filter__top-row-text-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: rem(8);
+
+        .search-filter__top-row-title {
+          font-size: $font-size-14;
+          font-weight: $font-semibold;
+          line-height: 1.5;
+          color: $theme-color-headline;
+        }
+      }
+
+      .search-filter__top-row-selected-container {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        justify-content: flex-end;
+        font-size: $font-size-12;
+        font-weight: $font-semibold;
+        line-height: 1.5;
+        color: $theme-color-body;
+        white-space: nowrap;
+      }
+    }
+
+    .search-filter__description {
+      font-size: $font-size-12;
+      line-height: 1.5;
+      color: $theme-color-body;
+      margin-top: $global-margin * .5;
+
+      &.search-filter__description__bottom-margin {
+        margin: ($global-margin * 2) 0 $global-margin 0;
+      }
+    }
+
+    .selected-filters {
+      @include selected-filter-wrap;
+
+      margin: ($global-margin) 0 0 0;
+      padding: 0;
+      background-color: unset;
+      flex-flow: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      @media (min-width: $medium-screen) {
+        &.right-fade {
+          mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 1) 8px);
+        }
+
+        &.left-fade {
+          mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 1) 8px);
+        }
+
+        &.right-fade.left-fade {
+          mask-image: linear-gradient(to left, transparent, black 4%, black 96%, transparent 100%);
+        }
+      }
+
+      .shown-filter-button {
+        margin: 0 rem(8) 0 0;
+        background-color: $gray-cool-5;
+        border: none;
+        line-height: 1.5;
+        color: $gray-90;
+        padding: rem(3) rem(4) rem(3) $global-padding;
+        white-space: nowrap;
+        min-width: max-content;
+        cursor: default;
+
+        &:hover {
+          background-color: $gray-cool-10;
+          border: none;
+        }
+
+        // DEV-11870 Remove this styling once time period is using the ShownValue.jsx component
+        &.time-period-button {
+          cursor: pointer;
+        }
+
+        .shown-filter-button__shown-filter-button-icon {
+          margin-left: rem(4);
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+
+          // can be removed once time period chips updated to use ShownValue.jsx
+          text-align: center;
+
+          &:hover {
+            background-color: $gray-cool-30;
+          }
+
+          svg {
+            height: rem(12);
+            width: rem(12);
+            color: $gray-90;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .search-filter__bottom-section {
+      margin-top: $global-margin;
+      // these rules for fonts won't be needed when this section displays chips
+      font-size: $font-size-12;
+      line-height: 1.5;
+      color: $theme-color-body;
+    }
+  }
+}

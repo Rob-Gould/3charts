@@ -1,0 +1,36 @@
+// DTUI Table component overrides
+.usa-dt-table__stacked {
+  @media (max-width: $tablet-screen - 1) {
+    .usda-table__cell {
+      border: unset !important;
+    }
+
+    .usda-table__body {
+      border: 1px solid $gray-cool-10;
+    }
+
+    .usda-table__cell-message {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-screen) {
+    .usda-table__cell-heading-container {
+      display: none;
+    }
+  }
+}
+
+.usa-dt-table__stacked-picker {
+  display: none;
+}
+
+.results-visualization-rank-section {
+  .usa-dt-table__stacked {
+    @media (min-width: $tablet-screen) {
+      .usda-table__cell-heading-container {
+        display: none;
+      }
+    }
+  }
+}
