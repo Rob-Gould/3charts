@@ -2,7 +2,8 @@
   "name": "usaspending-website",
   "version": "3.0.0",
   "description": "USAspending Website",
-  "repository": "fedspendingtransparency/usaspending-website",
+  "repository": "Rob-Gould/dashboard",
+  "homepage": "https://Rob-Gould.github.io/3charts",
   "main": "src/index.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions@0.0.3",
@@ -19,7 +20,9 @@
     "lhci:audit": "npx webpack --progress --config ./webpack/webpack.prod.config.js ; npx lhci autorun --chrome-flags=\"--headless\"; npx lhci --config=./lighthousercdesktop.js autorun --chrome-flags=\"--headless\"",
     "build-redirect-config": "npx babel-node scripts/buildRedirectConfig.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run prod",
+    "deploy": "gh-pages -d public"
   },
   "author": "",
   "engines": {
@@ -216,6 +219,7 @@
     "dompurify": "^3.2.4",
     "file-loader": "^6.2.0",
     "focus-trap-react": "^9.0.2",
+    "gh-pages": "^6.3.0",
     "history": "^4.6.1",
     "immutable": "^3.8.1",
     "intersection-observer": "^0.12.2",
