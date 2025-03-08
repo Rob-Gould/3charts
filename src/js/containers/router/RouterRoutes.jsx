@@ -4,7 +4,7 @@
  **/
 
 import React from 'react';
-
+import { Redirect } from "react-router-dom";
 const AgencyProfile = React.lazy(() => import('containers/agency/AgencyContainer').then((comp) => comp));
 const ErrorPage = React.lazy(() => import('components/errorPage/ErrorPage').then((comp) => comp));
 
@@ -12,10 +12,7 @@ const ErrorPage = React.lazy(() => import('components/errorPage/ErrorPage').then
 export const routes = [
     {
         path: `/`,
-        component: () => {
-            window.location.href = '/agency/department-of-defense?fy=2025';
-            return null;
-        },
+        component: () => <Redirect to="/agency/department-of-defense?fy=2025" />,
         exact: true
     },
     {
