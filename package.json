@@ -2,10 +2,7 @@
   "name": "usaspending-website",
   "version": "3.0.0",
   "description": "USAspending Website",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Rob-Gould/3charts.git"
-  },
+  "repository": "Rob-Gould/3charts",
   "homepage": "https://Rob-Gould.github.io/3charts",
   "main": "src/index.js",
   "scripts": {
